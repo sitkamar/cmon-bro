@@ -1,5 +1,4 @@
 Martin*|*20
-Dejv*|*18
-Pepik*|*24
-asd*|*0
-asdafsd*|*0
+Plevka*|*5
+Dejv*|*15
+Pepik*|*10

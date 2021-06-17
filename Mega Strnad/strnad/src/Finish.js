@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import './App.css';
-const score = localStorage.getItem('score');
 class Finish extends Component {
 
   constructor(props) {
@@ -24,7 +23,7 @@ class Finish extends Component {
   
   NameSender(){
     console.log(localStorage.getItem('name'));
-    axios.post("http://localhost:8000/savename",{ headers:{name: localStorage.getItem('name'), score: score}})
+    axios.post("http://localhost:8000/savename",{ headers:{name: localStorage.getItem('name'), score: localStorage.getItem('score')}})
                 .then(res =>{
                   console.log(res.data);
                 })
@@ -37,7 +36,7 @@ class Finish extends Component {
       <>
         <div className='container'>
           <div className='head'>
-            <h1> Save your Score: {score} </h1>
+            <h1> Save your Score: {localStorage.getItem('score')} </h1>
           </div>
           <form onSubmit={this.handleSubmit}>
         <label>
